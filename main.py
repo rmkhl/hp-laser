@@ -4,10 +4,10 @@ rm = pyvisa.ResourceManager()
 inst = rm.open_resource('GPIB0::3::INSTR', timeout=60000)
 
 def writeCommand(command):
-  inst.write('{}'.format(command))
+  inst.write(f'{command}')
 
 def readOutput(command):
-  inst.write('{}'.format(command))
+  inst.write(f'{command}')
   while True:
     try:
       byte = inst.read_bytes(1)
@@ -19,10 +19,10 @@ def readOutput(command):
 
 # 1-36
 def setSpeed(speed):
-  inst.write('VS {};'.format(speed))
+  inst.write(f'VS {speed};')
 
 def movePen(x, y):
-  inst.write('PA {},{};'.format(x, y))
+  inst.write(f'PA {x},{y};')
   inst.write('OA;')
   while True:
     byte = inst.read_bytes(1)
