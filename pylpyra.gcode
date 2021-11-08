@@ -1,0 +1,52 @@
+G21         ; Set units to mm
+G90         ; Absolute positioning
+G1 Z0 F2540      ; Move to clearance level
+
+;
+; Operation:    0
+; Name:         
+; Type:         Inside
+; Paths:        1
+; Direction:    Conventional
+; Cut Depth:    3.175
+; Pass Depth:   3.175
+; Plunge rate:  127
+; Cut rate:     1016
+;
+
+; Path 0
+; Rapid to initial position
+G1 X65.2115 Y93.5109 F2540
+G1 Z0.0000
+; plunge
+G1 Z-3.1750 F127
+; cut
+G1 X75.4863 Y88.0788 F1016
+G1 X84.1746 Y80.3252
+G1 X90.7694 Y70.7009
+G1 X94.8863 Y59.7657
+G1 X96.2858 Y48.1543
+G1 X94.8863 Y36.5427
+G1 X90.7694 Y25.6078
+G1 X84.1743 Y15.9832
+G1 X75.4863 Y8.2296
+G1 X65.2115 Y2.7976
+G1 X53.9445 Y0.0000
+G1 X42.3415 Y0.0000
+G1 X31.0746 Y2.7976
+G1 X20.7998 Y8.2296
+G1 X12.1117 Y15.9832
+G1 X5.5166 Y25.6078
+G1 X1.3998 Y36.5427
+G1 X0.0000 Y48.1543
+G1 X1.3998 Y59.7657
+G1 X5.5166 Y70.7009
+G1 X12.1115 Y80.3252
+G1 X20.7998 Y88.0788
+G1 X31.0746 Y93.5109
+G1 X42.3415 Y96.3087
+G1 X53.9445 Y96.3087
+G1 X65.2115 Y93.5109
+; Retract
+G1 Z0.0000 F2540
+M2
